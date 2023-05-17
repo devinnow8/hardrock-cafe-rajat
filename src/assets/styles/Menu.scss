@@ -1,0 +1,115 @@
+
+.wraper{
+    .size-2x{
+        font-size:2rem;
+    }
+    .menu{
+        .menu-top{
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            .logo{
+                flex:1;
+            }
+            .menu-name {
+                letter-spacing: 4px;
+                font-weight: 500;
+                flex:1;
+                text-align: center;
+            }
+            .cart-data{
+                flex:1;
+                text-align: right;
+                .cart-icon{
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        background-color: #f00;
+                        color: #fff;
+                        font-size: 0.65rem;
+                        border-radius: 50%;
+                        width: 15px;
+                        height: 15px;
+                        text-align: center;
+                        line-height: 15px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .menu-title{
+            font-size:1.75rem;
+            letter-spacing: 4px;
+        }
+        .menu-data{
+            justify-content: space-between;
+            .menu-data-inner{
+                margin-bottom: 2.5rem;
+                width:50%;
+                @media(max-width:991px){
+                    width:100%;
+                }
+                .image{
+                    img{
+                        width:100%;
+                        height:150px;
+                        object-fit: cover;
+                        border:3px solid #b28e5a;
+                        border-radius:8px;
+                    }
+                }
+                .cnt{
+                    .cnt-title{
+                        font-size:1.25rem;
+                        letter-spacing: 4px;
+                        font-weight: bold;
+                    }
+                    .cnt-price{
+                        color:#b28e5a;
+                        font-weight: bold;
+                    }
+                    .underline{
+                        width: 100%;
+                        background-color: #b28e5a;
+                        height: 1px;
+                    }
+                    .desc{
+                        margin:0.75rem 0 0 0;
+                        opacity: 0.7;
+                        font-size:15px;
+                    }
+                    .menu-button{
+                        margin-top:0.5rem;
+                        text-align: right;
+                        .add-btn {
+                            border: 1px solid #ccc;
+                            background-color: transparent;
+                            border-radius: 16px;
+                            padding: 0.15rem 1rem;
+                            margin-right:0.5rem;
+                            .addIcon{
+                                color: #e91e63;
+                                font-size:12px;
+                            }
+                        }
+                        .counter-btn{
+                            border: 1px solid #ccc;
+                            background-color: transparent;
+                            border-radius: 16px;
+                            padding: 0.15rem 1rem;
+                            span{
+                                margin:0 8px;
+                                color: #e91e63;
+                            }
+                            .counterIcon{
+                                font-size:12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
