@@ -8,5 +8,10 @@
         padding: 0.2rem 0.75rem;
         margin-right:12px;
         color:#b28e5a;
+        text-transform: capitalize;
+    }
+    .activeMenu{
+        background-color: #b28e5a;
+        color:#fff;
     }
 }

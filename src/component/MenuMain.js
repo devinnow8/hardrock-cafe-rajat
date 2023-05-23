@@ -1,12 +1,12 @@
 import React from 'react'
 import { AiOutlinePlus,AiOutlineMinus } from "react-icons/ai";
 
-const MenuMain = ({menuData}) => {
+const MenuMain = ({menuCnt,addToCart,showBtn}) => {
     return (
         <div>
             <div className='menu-data row'>
             {
-                menuData.map((item)=>{
+                menuCnt.map((item)=>{
                     const {id,image,name,price,desc} = item;
                     return(
                         <div className='row menu-data-inner' key={id}>
@@ -24,12 +24,17 @@ const MenuMain = ({menuData}) => {
                                     <div className="underline"></div>
                                     <p className='desc'>{desc}</p>
                                     <div className="menu-button">
-                                        <button className='add-btn'>Add <AiOutlinePlus className='addIcon'/></button>
-                                            <button className='counter-btn'>
-                                            <AiOutlinePlus className='counterIcon'/>
-                                            <span>1</span>
-                                            <AiOutlineMinus className='counterIcon'/>
-                                        </button>
+                                        <button className='add-btn' onClick={()=>addToCart(item)}>Add <AiOutlinePlus className='addIcon'/></button>
+                                        {
+                                            showBtn && <>
+                                                <button className='counter-btn'>
+                                                    <AiOutlinePlus className='counterIcon'/>
+                                                    <span>1</span>
+                                                    <AiOutlineMinus className='counterIcon'/>
+                                                </button>
+                                                <button className='add-btn ms-2'>Remove</button>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
